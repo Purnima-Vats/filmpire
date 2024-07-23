@@ -19,9 +19,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <CssBaseline />
-                <Navbar/>
-                {children}
+                <div className="flex h-full">
+                    <CssBaseline />
+                    <Navbar />
+                    <main className="flex-grow-1 p-2">
+                        <div className="h-[70px]"/>
+                        {children}
+                    </main>
+                </div>
             </body>
         </html>
     );
